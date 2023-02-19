@@ -1,6 +1,6 @@
 import { addWaveHeader } from "https://deno.land/x/wave_header/mod.ts";
 
-interface Subtitle {
+export interface Subtitle {
   startTime: number;
   endTime: number;
   text: string;
@@ -12,7 +12,7 @@ const srtTimeToMilliseconds = (timeString: string) =>
     .split(/[:,]/)
     .reduce((acc, val, i) => acc + +val * [3600000, 60000, 1000, 1][i], 0);
 
-const parseSRT = (srtString: string): Subtitle[] =>
+export const parseSRT = (srtString: string): Subtitle[] =>
   srtString
     .split("\n\n")
     .filter((v) => v)
