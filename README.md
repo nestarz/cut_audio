@@ -39,6 +39,6 @@ for await (const {
 
 ## CLI usage
 
-```
-deno run -A https://deno.land/x/cut_audio/mod.ts "./conference-de-sophie-calle-au-mac.wav" "./conference-de-sophie-calle-au-mac.wav.small.srt" 16000 16 2 ./output/
+```sh
+deno run -A https://deno.land/x/cut_audio/mod.ts "wav_path" "srt_path" sample_rate bit_depth channels out_dir
 ```
